@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "CookiePost",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+                    "lib.js",
+
+        "main.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "19.png",
+      "38": "39.png"
+    }
+  },
+  "background": {
+    "scripts": [
+            "lib.js",
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "https://*/",
+    "storage"
+  ],
+  "options_ui": {
+
+    "page": "options.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon@example.com"
+    }
+  }
+}
+
