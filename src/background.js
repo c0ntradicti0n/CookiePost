@@ -59,10 +59,11 @@ ${fills.name}
 `);
 
 function openTab() {
+    console.log("write mail")
     ;(async () => {
         const data = await (await fetch('https://ipapi.co/json/')).json();
-        const impressumLink = await browser.storage.sync.get("impressumLink")
-        const response = await fetch(impressumLink.impressumLink);
+        const imprintLink = await browser.storage.sync.get("imprintLink")
+        const response = await fetch(imprintLink.imprintLink);
         const html = await response.text();
         const ip = data.ip;
         const mymail = (await browser.storage.sync.get("email")).email;

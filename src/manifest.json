@@ -8,8 +8,7 @@
         "<all_urls>"
       ],
       "js": [
-                    "lib.js",
-
+        "lib.js",
         "main.js"
       ]
     }
@@ -22,7 +21,7 @@
   },
   "background": {
     "scripts": [
-            "lib.js",
+      "lib.js",
       "background.js"
     ]
   },
@@ -32,12 +31,11 @@
     "storage"
   ],
   "options_ui": {
-
     "page": "options.html"
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "addon@example.com"
+      "id": "dagedieb@gmail.com"
     }
   }
 }

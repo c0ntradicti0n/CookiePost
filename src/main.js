@@ -1,9 +1,9 @@
-var imprints = ["Imprint", "Impressum", "Cookie Policy"]
+const imprints = ["Imprint", "Impressum", "Cookie Policy"];
 const imprintXpath = `//a[${imprints.map(i => "contains(string(), \""+i+"\")").join(" or ")}]`;
 ;(async () => {
-    const impressumLink = global.waitForElm(imprintXpath);
-    impressumLink.then(async impressumLink => {
-        console.log(impressumLink.href)
-        browser.storage.sync.set({impressumLink: impressumLink.href})
+    const imprintLink = global.waitForElm(imprintXpath);
+    imprintLink.then(async imprintLink => {
+        console.log(imprintLink.href)
+        browser.storage.sync.set({imprintLink: imprintLink.href})
     }).catch(console.log)
 })()
